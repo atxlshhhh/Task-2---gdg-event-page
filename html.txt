@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GDG GU Event 2025</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Theme Toggle -->
+  <button id="theme-toggle">🌙</button>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>🚀 GDG Galgotias Event 2025</h1>
+    <p>Join us for an exciting day of tech, learning, and networking!</p>
+    <div id="countdown"></div>
+  </header>
+
+  <!-- Registration Form -->
+  <section id="register">
+    <h2>Register Now</h2>
+    <form id="eventForm">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="College/Organization" required />
+      <select required>
+        <option value="">Select Interest Area</option>
+        <option>Web Dev</option>
+        <option>AI/ML</option>
+        <option>Cloud</option>
+        <option>Open Source</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="success-msg"></p>
+  </section>
+
+  <!-- Event Highlights -->
+  <section id="highlights">
+    <h2>Event Highlights</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>🔥 Keynote Session</h3>
+        <p>Inspiring talk by Google Developer Experts.</p>
+      </div>
+      <div class="card">
+        <h3>👩‍💻 Hackathon</h3>
+        <p>Build innovative projects with mentors.</p>
+      </div>
+      <div class="card">
+        <h3>🌐 Networking</h3>
+        <p>Meet peers, mentors, and recruiters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section id="location">
+    <h2>📍 Event Location</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3519.434... (paste GDG Galgotias map link)"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Follow us: 
+      <a href="https://twitter.com/gdggalgotias">Twitter</a> | 
+      <a href="https://linkedin.com/company/gdggalgotias">LinkedIn</a> | 
+      <a href="https://github.com/gdggalgotias">GitHub</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

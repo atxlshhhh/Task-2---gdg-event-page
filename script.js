@@ -1,37 +1,30 @@
 // Countdown Timer
-const countdown = document.getElementById("countdown");
-const eventDate = new Date("Oct 30, 2025 10:00:00").getTime();
+const eventDate = new Date("Nov 15, 2025 10:00:00").getTime();
+const timer = document.getElementById("timer");
 
 setInterval(() => {
-  let now = new Date().getTime();
-  let diff = eventDate - now;
+  const now = new Date().getTime();
+  const distance = eventDate - now;
 
-  if (diff <= 0) {
-    countdown.innerHTML = "🎉 Event Started!";
+  if (distance < 0) {
+    timer.innerHTML = "🎉 The event has started!";
     return;
   }
 
-  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  let secs = Math.floor((diff % (1000 * 60)) / 1000);
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  countdown.innerHTML = `${days}d ${hours}h ${mins}m ${secs}s`;
+  timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }, 1000);
 
-// Form Submission
-const form = document.getElementById("eventForm");
-const successMsg = document.getElementById("success-msg");
+// Registration Form Simulation
+const form = document.getElementById("registrationForm");
+const successMessage = document.getElementById("successMessage");
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
-  successMsg.innerText = "✅ Registration Successful! Check your email soon.";
+  successMessage.style.display = "block";
   form.reset();
-});
-
-// Dark/Light Theme Toggle
-const toggleBtn = document.getElementById("theme-toggle");
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  toggleBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 });

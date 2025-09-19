@@ -3,126 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GDG GU Event 2025</title>
+  <title>Agent_ai | GDG Galgotias</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <h1>GDG Galgotias University Event 2025</h1>
-    <p>Join us for an exciting day of learning, networking, and fun!</p>
+    <h1>🚀 Agent_ai | GDG Galgotias</h1>
+    <p>Step into the future of intelligence with Agent_ai 🤖✨, an interactive experience designed for developers, founders, and tech enthusiasts eager to harness agentic AI using the latest tools and cloud technologies! ☁️🚀</p>
+    <button onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">Register Now</button>
   </header>
 
   <!-- Countdown -->
-  <section class="countdown">
-    <h2>Countdown to Event</h2>
+  <section id="countdown">
+    <h2>⏳ Countdown to Event</h2>
     <div id="timer"></div>
   </section>
 
-  <!-- Highlights -->
-  <section class="highlights" id="highlights">
-    <h2>Event Highlights</h2>
-    <div class="card-container">
+  <!-- Event Highlights -->
+  <section id="highlights">
+    <h2>🌟 Event Highlights</h2>
+    <div class="cards">
       <div class="card">
-        <h3>Expert Sessions</h3>
-        <p>Learn from Google Developers, industry experts, and open-source contributors.</p>
+        <h3>🧠 Immersive Sessions</h3>
+        <p>Dive deep into agentic AI with technical demonstrations and expert-led talks focused on AI tools and cloud platforms.</p>
       </div>
       <div class="card">
-        <h3>Swags & Goodies</h3>
-        <p>Exciting T-shirts, stickers, and exclusive GDG GU swags for active participants.</p>
+        <h3>🔧 Practical Applications</h3>
+        <p>Learn how startups and enterprises can create intelligent, autonomous agents using Google technologies.</p>
       </div>
       <div class="card">
-        <h3>Networking</h3>
-        <p>Meet like-minded developers, build connections, and explore collaboration opportunities.</p>
+        <h3>🤝 Networking & Swags</h3>
+        <p>Meet industry experts, exchange ideas, and grab exclusive GDG swags while building valuable connections.</p>
       </div>
     </div>
   </section>
 
+  <!-- Speakers -->
+  <section id="speakers">
+    <h2>🎙️ Speakers</h2>
+    <p>Speakers to be announced soon... Stay tuned!</p>
+  </section>
+
+  <!-- Agenda -->
+  <section id="agenda">
+    <h2>📅 Agenda</h2>
+    <p>Agenda to be announced soon... exciting sessions coming up!</p>
+  </section>
+
+  <!-- Schedule -->
+  <section id="schedule">
+    <h2>🗓️ Event Schedule</h2>
+    <table>
+      <tr><th>Time</th><th>Session</th></tr>
+      <tr><td>10:00 AM</td><td>Registration & Networking</td></tr>
+      <tr><td>11:00 AM</td><td>Opening Ceremony</td></tr>
+      <tr><td>11:30 AM</td><td>Sessions Begin</td></tr>
+      <tr><td>02:00 PM</td><td>Lunch & Networking</td></tr>
+      <tr><td>05:00 PM</td><td>Closing Note</td></tr>
+    </table>
+  </section>
+
   <!-- Registration -->
-  <section class="registration" id="register">
-    <h2>Register Now</h2>
-    <form id="registrationForm" enctype="multipart/form-data">
-      <label for="fname">First Name:</label>
-      <input type="text" id="fname" name="fname" required>
-
-      <label for="lname">Last Name:</label>
-      <input type="text" id="lname" name="lname" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="college">College / Organization:</label>
-      <input type="text" id="college" name="college" required>
-
-      <label for="interest">Area of Interest:</label>
-      <select id="interest" name="interest" required>
-        <option value="">--Select--</option>
-        <option>Web Development</option>
-        <option>Machine Learning</option>
-        <option>Cloud & DevOps</option>
-        <option>Open Source</option>
-        <option>Other</option>
-      </select>
-
-      <label for="linkedin">LinkedIn Profile:</label>
-      <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/username">
-
-      <label for="github">GitHub Profile:</label>
-      <input type="url" id="github" name="github" placeholder="https://github.com/username">
-
-      <label for="resume">Upload Resume (PDF/DOC):</label>
-      <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
-
-      <label for="tshirt">T-shirt Size:</label>
-      <select id="tshirt" name="tshirt" required>
-        <option value="">--Select--</option>
-        <option>S</option>
-        <option>M</option>
-        <option>L</option>
-        <option>XL</option>
-        <option>XXL</option>
-      </select>
-
-      <label for="why">Why do you want to join this event?</label>
-      <textarea id="why" name="why" rows="3" placeholder="Write in 2-3 lines..." required></textarea>
-
-      <label for="diet">Dietary Preference:</label>
-      <select id="diet" name="diet" required>
-        <option value="">--Select--</option>
-        <option>Vegetarian</option>
-        <option>Vegan</option>
-        <option>Other</option>
-      </select>
-
+  <section id="register">
+    <h2>📝 Register Now</h2>
+    <form id="regForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="College/Organization" required>
+      <input type="text" placeholder="Interest Area" required>
+      <input type="url" placeholder="LinkedIn Profile URL">
+      <input type="url" placeholder="GitHub Profile URL">
+      <label>Upload Resume (PDF)</label>
+      <input type="file" accept=".pdf" required>
+      <label>Upload Any AI Project (ZIP)</label>
+      <input type="file" accept=".zip,.rar">
       <button type="submit">Submit Registration</button>
     </form>
-    <p id="successMessage" style="display:none; color:green; font-weight:bold;">
-      🎉 Registration Successful! We’ll get back to you soon.
-    </p>
+    <p id="successMsg" style="display:none; color:green; margin-top:10px;">✅ Thank you! Your registration is successful. Check your email for confirmation.</p>
   </section>
 
   <!-- Location -->
-  <section class="location" id="location">
-    <h2>Event Location</h2>
-    <p>
-      <b>Full Address:</b><br>
-      Plot No. 2, Sector 17-A, Yamuna Expressway <br>
-      Greater Noida, Gautam Buddh Nagar <br>
-      Uttar Pradesh, India <br>
-      <b>Landmark:</b> Opposite the Buddh International Circuit.
-    </p>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3517.6042296784657!2d77.52773547493017!3d28.3540294758075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc189a9129d25%3A0x46d21e643c3f39ad!2sGalgotias%20University!5e0!3m2!1sen!2sin!4v1695110000000"
-      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <section id="location">
+    <h2>📍 Event Location</h2>
+    <p><strong>Full Address:</strong><br>
+      Plot No. 2, Sector 17-A, Yamuna Expressway,<br>
+      Greater Noida, Gautam Buddh Nagar, Uttar Pradesh, India<br>
+      Landmark: Opposite the Buddh International Circuit.</p>
+    <iframe src="https://maps.google.com/maps?q=Plot%20No.%202,%20Sector%2017-A,%20Yamuna%20Expressway,%20Greater%20Noida&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;"></iframe>
   </section>
 
-  <!-- Footer -->
+  <!-- Social Links -->
   <footer>
-    <p>Follow us on:</p>
+    <p>🔗 Connect with us:</p>
     <a href="https://www.linkedin.com/company/gdsc-gu/" target="_blank">LinkedIn</a> |
     <a href="https://github.com/DSC-Galgotias" target="_blank">GitHub</a>
-    <p>&copy; 2025 GDG Galgotias University</p>
+    <br><br>
+    <button id="themeToggle">🌙 Toggle Dark/Light Mode</button>
   </footer>
+
+  <script src="script.js"></script>
 </body>
-  </html>
+</html>

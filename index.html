@@ -1,78 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GDG GU Event 2025</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Theme Toggle -->
-  <button id="theme-toggle">🌙</button>
-
-  <!-- Hero Section -->
+  <!-- Header -->
   <header>
-    <h1>🚀 GDG Galgotias Event 2025</h1>
-    <p>Join us for an exciting day of tech, learning, and networking!</p>
-    <div id="countdown"></div>
+    <h1>GDG Galgotias University Event 2025</h1>
+    <p>Join us for an exciting day of learning, networking, and fun!</p>
   </header>
 
-  <!-- Registration Form -->
-  <section id="register">
-    <h2>Register Now</h2>
-    <form id="eventForm">
-      <input type="text" placeholder="Full Name" required />
-      <input type="email" placeholder="Email" required />
-      <input type="text" placeholder="College/Organization" required />
-      <select required>
-        <option value="">Select Interest Area</option>
-        <option>Web Dev</option>
-        <option>AI/ML</option>
-        <option>Cloud</option>
-        <option>Open Source</option>
-      </select>
-      <button type="submit">Submit</button>
-    </form>
-    <p id="success-msg"></p>
+  <!-- Countdown -->
+  <section class="countdown">
+    <h2>Countdown to Event</h2>
+    <div id="timer"></div>
   </section>
 
-  <!-- Event Highlights -->
-  <section id="highlights">
+  <!-- Highlights -->
+  <section class="highlights" id="highlights">
     <h2>Event Highlights</h2>
-    <div class="cards">
+    <div class="card-container">
       <div class="card">
-        <h3>🔥 Keynote Session</h3>
-        <p>Inspiring talk by Google Developer Experts.</p>
+        <h3>Expert Sessions</h3>
+        <p>Learn from Google Developers, industry experts, and open-source contributors.</p>
       </div>
       <div class="card">
-        <h3>👩‍💻 Hackathon</h3>
-        <p>Build innovative projects with mentors.</p>
+        <h3>Swags & Goodies</h3>
+        <p>Exciting T-shirts, stickers, and exclusive GDG GU swags for active participants.</p>
       </div>
       <div class="card">
-        <h3>🌐 Networking</h3>
-        <p>Meet peers, mentors, and recruiters.</p>
+        <h3>Networking</h3>
+        <p>Meet like-minded developers, build connections, and explore collaboration opportunities.</p>
       </div>
     </div>
   </section>
 
+  <!-- Registration -->
+  <section class="registration" id="register">
+    <h2>Register Now</h2>
+    <form id="registrationForm" enctype="multipart/form-data">
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname" required>
+
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="college">College / Organization:</label>
+      <input type="text" id="college" name="college" required>
+
+      <label for="interest">Area of Interest:</label>
+      <select id="interest" name="interest" required>
+        <option value="">--Select--</option>
+        <option>Web Development</option>
+        <option>Machine Learning</option>
+        <option>Cloud & DevOps</option>
+        <option>Open Source</option>
+        <option>Other</option>
+      </select>
+
+      <label for="linkedin">LinkedIn Profile:</label>
+      <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/username">
+
+      <label for="github">GitHub Profile:</label>
+      <input type="url" id="github" name="github" placeholder="https://github.com/username">
+
+      <label for="resume">Upload Resume (PDF/DOC):</label>
+      <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+      <label for="tshirt">T-shirt Size:</label>
+      <select id="tshirt" name="tshirt" required>
+        <option value="">--Select--</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+        <option>XXL</option>
+      </select>
+
+      <label for="why">Why do you want to join this event?</label>
+      <textarea id="why" name="why" rows="3" placeholder="Write in 2-3 lines..." required></textarea>
+
+      <label for="diet">Dietary Preference:</label>
+      <select id="diet" name="diet" required>
+        <option value="">--Select--</option>
+        <option>Vegetarian</option>
+        <option>Vegan</option>
+        <option>Other</option>
+      </select>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+    <p id="successMessage" style="display:none; color:green; font-weight:bold;">
+      🎉 Registration Successful! We’ll get back to you soon.
+    </p>
+  </section>
+
   <!-- Location -->
-  <section id="location">
-    <h2>📍 Event Location</h2>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3519.434... (paste GDG Galgotias map link)"
-      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
+  <section class="location" id="location">
+    <h2>Event Location</h2>
+    <p>
+      <b>Full Address:</b><br>
+      Plot No. 2, Sector 17-A, Yamuna Expressway <br>
+      Greater Noida, Gautam Buddh Nagar <br>
+      Uttar Pradesh, India <br>
+      <b>Landmark:</b> Opposite the Buddh International Circuit.
+    </p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3517.6042296784657!2d77.52773547493017!3d28.3540294758075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc189a9129d25%3A0x46d21e643c3f39ad!2sGalgotias%20University!5e0!3m2!1sen!2sin!4v1695110000000"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>Follow us: 
-      <a href="https://twitter.com/gdggalgotias">Twitter</a> | 
-      <a href="https://linkedin.com/company/gdggalgotias">LinkedIn</a> | 
-      <a href="https://github.com/gdggalgotias">GitHub</a>
-    </p>
+    <p>Follow us on:</p>
+    <a href="https://www.linkedin.com/company/gdsc-gu/" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/DSC-Galgotias" target="_blank">GitHub</a>
+    <p>&copy; 2025 GDG Galgotias University</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
-</html>
+  </html>

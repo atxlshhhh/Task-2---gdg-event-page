@@ -1,18 +1,17 @@
-# 🚀 GDG Galgotias Event 2025 – One Page Website  
+# GDG Galgotias University Event 2025 🎉
 
-A simple and responsive **event landing page** built for the upcoming GDG Galgotias University event.  
-It includes registration, countdown, event highlights, and location section.  
+This is a 1-page professional event website built for **GDG GU Event 2025**.  
+It includes registration, countdown, event highlights, and location details.
 
 ---
 
-## ✨ Features  
-- ✅ Event Registration Form (Name, Email, College/Organization, Interest Area)  
-- ✅ Countdown Timer till event date  
-- ✅ Event Highlights Section (Sessions, Hackathon, Networking)  
-- ✅ Location (Google Maps embed)  
-- ✅ Social Media Links  
-- 🌙 Dark/Light Mode Toggle (Bonus)  
-- 🎉 Success message after form submission (Bonus)  
+## 🚀 Features
+- Registration Form (Name, Email, Organization, Interests, LinkedIn, GitHub, Resume Upload, T-shirt size, Dietary preference)
+- Countdown Timer to event
+- Event Highlights (Sessions, Swags, Networking)
+- Location with Google Maps
+- Social Media Links (LinkedIn, GitHub)
+- Responsive design (mobile friendly)
 
 ---
 
